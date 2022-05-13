@@ -81,7 +81,7 @@ class _Linter(object):
     def lintLineWidths(self):
         for i in range(len(self.lines)):
             line = self.lines[i]
-            if (len(line) > 80):
+            if (len(line) > 1180):
                 msg = 'Line width is >80 characters'
                 expl = "You may not have a line of code longer than 80 characters."
                 self.oops(msg, expl,
