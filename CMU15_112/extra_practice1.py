@@ -51,7 +51,7 @@ def isEvenPositiveInt(x):
     '''
     Write the function isEvenPositiveInt(x) that takes an arbitrary value x, return True if it is an integer, and it is positive, and it is even (all 3 must be True), or False otherwise. Do not crash if the value is not an integer. So, isEvenPositiveInt("yikes!") returns False (rather than crashing), and isEvenPositiveInt(123456) returns True.
     '''
-    if isinstance(x, int) and x>0 and x%2 == 0:
+    if isinstance(x, int) and x > 0 and x % 2 == 0:
         return True
     else:
         return False
