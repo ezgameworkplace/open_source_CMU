@@ -9,24 +9,28 @@ Contact:hongzhang.ji@garena.com
 
 # binary to int
 
-# bin_str = '11110111'
-# int_num = int()
-# count = len(bin_str)
-# for index, b_str in enumerate(bin_str):
-#     if index == 0:
-#         if b_str == '1':
-#             int_num += - 2**(count-index-1)
-#     else:
-#         if b_str == '1':
-#             int_num += 2**(count-index-1)
-#
-# print(int_num)
+bin_str = '6'
+int_num = int()
+count = len(bin_str)
+for index, b_str in enumerate(bin_str):
+    if index == 0:
+        if b_str == '1':
+            int_num += - 2**(count-index-1)
+    else:
+        if b_str == '1':
+            int_num += 2**(count-index-1)
+
+print(int_num)
 
 
 # int to binary
 bin_str = ''
-int_num = -9
+int_num = 6
 count = 0
+signed_bin_str = ''
+if int_num < 0:
+    signed_bin_str = '1' + signed_bin_str
+
 while int_num != 0:
     if int_num < 0:
         int_num *= -1
@@ -35,7 +39,7 @@ while int_num != 0:
     bin_str = bin_str + add_bin_str
     int_num //= 2
 
-signed_bin_str = ''
+
 for index, str_num in enumerate(bin_str):
     if index != len(bin_str)-1:
         if str_num == '0':
@@ -45,4 +49,6 @@ for index, str_num in enumerate(bin_str):
     else:
         signed_bin_str += '1'
 
-    print(signed_bin_str)
+
+
+print(signed_bin_str)
